@@ -79,6 +79,7 @@
 		38267B781D81AA900039C554 = {
 			isa = PBXGroup;
 			children = (
+				38267BB51D81AAF30039C554 /* models */,
 				38267B831D81AA900039C554 /* TheTeleprompter */,
 				38267B9B1D81AA900039C554 /* TheTeleprompterTests */,
 				38267BA61D81AA900039C554 /* TheTeleprompterUITests */,
@@ -126,6 +127,13 @@
 				38267BA91D81AA900039C554 /* Info.plist */,
 			);
 			path = TheTeleprompterUITests;
+			sourceTree = "<group>";
+		};
+		38267BB51D81AAF30039C554 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
