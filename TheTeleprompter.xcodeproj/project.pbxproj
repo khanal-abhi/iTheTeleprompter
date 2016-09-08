@@ -15,6 +15,13 @@
 		38267B921D81AA900039C554 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38267B901D81AA900039C554 /* LaunchScreen.storyboard */; };
 		38267B9D1D81AA900039C554 /* TheTeleprompterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38267B9C1D81AA900039C554 /* TheTeleprompterTests.swift */; };
 		38267BA81D81AA900039C554 /* TheTeleprompterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38267BA71D81AA900039C554 /* TheTeleprompterUITests.swift */; };
+		38267BB71D81AB3B0039C554 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 38267BB61D81AB3B0039C554 /* README.md */; };
+		38267BBA1D81AB770039C554 /* Script+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38267BB81D81AB770039C554 /* Script+CoreDataProperties.swift */; };
+		38267BBB1D81AB770039C554 /* Script+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38267BB81D81AB770039C554 /* Script+CoreDataProperties.swift */; };
+		38267BBC1D81AB770039C554 /* Script+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38267BB81D81AB770039C554 /* Script+CoreDataProperties.swift */; };
+		38267BBD1D81AB770039C554 /* Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38267BB91D81AB770039C554 /* Script.swift */; };
+		38267BBE1D81AB770039C554 /* Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38267BB91D81AB770039C554 /* Script.swift */; };
+		38267BBF1D81AB770039C554 /* Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38267BB91D81AB770039C554 /* Script.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,9 @@
 		38267BA31D81AA900039C554 /* TheTeleprompterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheTeleprompterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38267BA71D81AA900039C554 /* TheTeleprompterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheTeleprompterUITests.swift; sourceTree = "<group>"; };
 		38267BA91D81AA900039C554 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38267BB61D81AB3B0039C554 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		38267BB81D81AB770039C554 /* Script+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Script+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		38267BB91D81AB770039C554 /* Script.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +89,9 @@
 		38267B781D81AA900039C554 = {
 			isa = PBXGroup;
 			children = (
+				38267BB81D81AB770039C554 /* Script+CoreDataProperties.swift */,
+				38267BB91D81AB770039C554 /* Script.swift */,
+				38267BB61D81AB3B0039C554 /* README.md */,
 				38267BB51D81AAF30039C554 /* models */,
 				38267B831D81AA900039C554 /* TheTeleprompter */,
 				38267B9B1D81AA900039C554 /* TheTeleprompterTests */,
@@ -270,8 +283,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38267BBA1D81AB770039C554 /* Script+CoreDataProperties.swift in Sources */,
 				38267B8D1D81AA900039C554 /* TheTeleprompter.xcdatamodeld in Sources */,
 				38267B871D81AA900039C554 /* ViewController.swift in Sources */,
+				38267BB71D81AB3B0039C554 /* README.md in Sources */,
+				38267BBD1D81AB770039C554 /* Script.swift in Sources */,
 				38267B851D81AA900039C554 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +296,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38267BBB1D81AB770039C554 /* Script+CoreDataProperties.swift in Sources */,
+				38267BBE1D81AB770039C554 /* Script.swift in Sources */,
 				38267B9D1D81AA900039C554 /* TheTeleprompterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +306,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38267BBC1D81AB770039C554 /* Script+CoreDataProperties.swift in Sources */,
+				38267BBF1D81AB770039C554 /* Script.swift in Sources */,
 				38267BA81D81AA900039C554 /* TheTeleprompterUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
