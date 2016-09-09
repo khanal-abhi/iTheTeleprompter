@@ -14,6 +14,6 @@ class Script: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
     
-    static let entityName = "ScriptEntity";
+    static let entityName = "Script";
 
 }

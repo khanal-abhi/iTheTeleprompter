@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QHC-Dr-vQO">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Scroll View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ScrollViewController" customModule="TheTeleprompter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,74 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GE2-nG-kaC">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Play" id="Adz-II-SgG"/>
+                                    <barButtonItem title="Swap" id="aH2-b8-U4W"/>
+                                </items>
+                            </toolbar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="black" keyboardDismissMode="onDrag" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0E9-ob-gfK">
+                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" updatesFrequently="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="yxk-vx-VRA" appends="YES" id="jf1-Fg-6JB"/>
+                                </connections>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GE2-nG-kaC" firstAttribute="top" secondItem="0E9-ob-gfK" secondAttribute="bottom" id="7dr-uv-XN0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GE2-nG-kaC" secondAttribute="bottom" id="MmL-IU-MpN"/>
+                            <constraint firstAttribute="trailing" secondItem="0E9-ob-gfK" secondAttribute="trailing" id="SuE-St-cAe"/>
+                            <constraint firstItem="GE2-nG-kaC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YMU-Ya-Tzt"/>
+                            <constraint firstItem="0E9-ob-gfK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="d7Q-ma-4Sy"/>
+                            <constraint firstAttribute="trailing" secondItem="GE2-nG-kaC" secondAttribute="trailing" id="qr0-Pe-qnN"/>
+                            <constraint firstItem="0E9-ob-gfK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ynU-28-uJK"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="YOe-cz-z5v"/>
+                    <connections>
+                        <outlet property="playTabButton" destination="GE2-nG-kaC" id="fmt-vj-bTa"/>
+                        <outlet property="script" destination="0E9-ob-gfK" id="APn-po-eDa"/>
+                        <outlet property="swapTabButton" destination="aH2-b8-U4W" id="H3I-10-JBw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="yxk-vx-VRA">
+                    <connections>
+                        <action selector="pinchGesturePerformed:" destination="BYZ-38-t0r" id="FVw-cR-NYe"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="Ho4-LK-ovz"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="1137" y="399"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VgG-oV-reB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QHC-Dr-vQO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TeQ-Xb-eQy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CFZ-ni-GMK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jf1-5r-L8b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="321" y="1059"/>
         </scene>
     </scenes>
 </document>
